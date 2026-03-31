@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  outputDir: 'docs',
+  // 部署到GitHub Pages子路径必须配置，否则静态资源404
+  publicPath: process.env.NODE_ENV === 'production' ? '/excelJson/' : '/',
   transpileDependencies: true,
   devServer: {
     port: 8081, // Use a different port to avoid conflict if 8080 is taken
