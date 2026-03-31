@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
+  outputDir: 'docs',
   transpileDependencies: true,
   devServer: {
     port: 8081, // Use a different port to avoid conflict if 8080 is taken
